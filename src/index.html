@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/area.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        长度：<input type="number" id="length" placeholder="0" size="6">&nbsp;
+        扣减长度：<input type="number" id="minusLength" placeholder="0" size="6"><br>
+        宽度：<input type="number" id="width" placeholder="0" size="6">&nbsp;
+        扣减宽度：<input type="number" id="minusWidth" placeholder="0" size="6"><br>
+        高度：<input type="number" id="height" placeholder="0" size="6">&nbsp;
+        扣减面积：<input type="number" id="minusArea" placeholder="0" disabled  size="6"><br>
+
+        当前面积：<div style="text-align: center;font-size: large;color: red;" id="result"></div>
+        <button id="minus" >计算</button>&nbsp;&nbsp;<button id="plus" >加上扣减面积</button><br>
+        计算日志：<br>
+        <div id="log" style="font-size: smaller"></div>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/jquery-1.9.1.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

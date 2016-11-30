@@ -132,7 +132,7 @@ jQuery(function () {
         if (content == undefined || content == 'undefined' ||content.length==0) {
             return false;
         }
-        content = content.replace("<br>","\n");
+        content = content.replace("<br>","          ");
         // 设置元素内容
         aux.setAttribute("value", content);
 

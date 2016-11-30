@@ -117,8 +117,9 @@ jQuery(function () {
 
 
     $("#logTitle").click(function () {
-        copyToClipboard('log');
-        alert("已将计算过程复制到粘贴板");
+        if (copyToClipboard('log')){
+            alert("已将计算过程复制到粘贴板");
+        }
     });
 
     function copyToClipboard(elementId) {
@@ -128,6 +129,10 @@ jQuery(function () {
         // 获取复制内容
         var content = document.getElementById(elementId).innerHTML || document.getElementById(elementId).value;
 
+        if (content == undefined || content == 'undefined' ||content.length==0) {
+            return false;
+        }
+        content = content.replace("<br>","\n");
         // 设置元素内容
         aux.setAttribute("value", content);
 
@@ -142,5 +147,7 @@ jQuery(function () {
 
         // 删除创建元素
         document.body.removeChild(aux);
+
+        return true;
     }
 });
